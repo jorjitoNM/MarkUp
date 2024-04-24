@@ -19,4 +19,3 @@ for ( var i=0;i<infos.length;i++) {
         alert("Upadte");
     })
 }
-//fuuuuuck
