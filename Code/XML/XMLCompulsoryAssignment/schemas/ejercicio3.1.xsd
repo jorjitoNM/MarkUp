@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elements -->
+    <xs:element name="Companies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Company" type="CompanyType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- Types -->
+    <xs:complexType name="CompanyType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Employee" type="employeeType" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="employeeType">
+        <xs:sequence>
+            <xs:element name="Name"/>
+            <xs:element ref="Age"/>
+            <xs:element name="Address" type="addressType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="addressType">
+        <xs:sequence>
+            <xs:element name="HouseNo"/>
+            <xs:element name="Street"/>
+            <xs:element ref="ZipCode"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Refs -->
+    <xs:element name="ZipCode">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:totalDigits value="6"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="Age">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minExclusive value="18"/>
+                <xs:maxInclusive value="65"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>

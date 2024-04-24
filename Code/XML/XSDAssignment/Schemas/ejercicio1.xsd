@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Employee">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NameE" type="xs:string"></xs:element>
+                <xs:element name="PW" type="xs:string"></xs:element>
+                <xs:element name="Salary" type="xs:decimal" default="1000.00"></xs:element>
+                <xs:element name="Title" type="xs:string">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Sales Manager"></xs:enumeration>
+                            <xs:enumeration value="Marketing agent"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

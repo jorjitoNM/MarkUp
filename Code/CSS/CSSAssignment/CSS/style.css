@@ -1,0 +1,245 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+.border {
+    border-right: solid;
+    border-color: rgba(128, 128, 128, 0.750);
+    border-width: thin;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: darkkhaki;
+}
+a:hover {
+    color: gold;
+}
+a:active {
+    color: lime;
+}
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+.memberandsuscribe a:visited {
+    color: red;
+    font-family: sans-serif;
+}
+.footerandlogin {
+    font-family: sans-serif;
+}
+/*
+header
+*/
+header {
+    height: 10%;
+    padding-bottom: 3.5%;
+}
+#search {
+    float: left;
+    padding: 1% 0%;
+}
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    float: left;
+    font-size: 50px;
+    margin-left: 41%;
+}
+#right {
+    float: right;
+    width: 17%;
+    padding: 0.7% 0%;
+    
+}
+#Envelope {
+    float:left;
+    padding-top: 1%;
+    padding-right:20px;
+    margin-bottom:2%;
+}
+#SUSCRIBE {
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+#LOGIN {
+    float: left;
+    padding-left: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+
+
+/*
+navbar
+*/
+nav {
+    border-bottom: solid;
+    border-color: rgba(128, 128, 128, 0.750);
+    border-width: 2px;
+}
+ul {
+    color:black;
+    list-style: none;
+    clear:both;
+    margin: 2% 25%;
+    width: 100%;
+}
+li {
+    display: inline;
+    margin-right: 7%;
+}
+
+/*
+form
+*/
+#fieldset1 {
+    border-top: solid 1px rgba(128, 128, 128, 0.750);
+    margin-top: 5%;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+#legend1 {
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: sans-serif;
+    width: 250px;
+    height: 30px;
+    clear: both;
+    padding: 1% 0.5% 0% 0.5%;
+}
+#boxesbox {
+    width: 100%;
+    margin-left: 5%;
+}
+.boxes {
+    float: left;
+    width: 25%;
+    height: 20%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 3%;
+}
+.boxspace {
+    margin-top: 70px;
+}
+.boxspace2 {
+    margin-top: 5px;
+}
+.boxspacebig {
+    margin-top: 90px;
+}
+.lock {
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+#span1 {
+    color:red;
+}
+
+/*
+mainbox
+*/
+#fieldset2 {
+    border-top: solid 1px rgba(128, 128, 128, 0.750);
+    padding: 1% 0%;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    width: 100%;
+}
+#legend2 {
+    text-align: center;
+    color: grey;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-style: oblique;
+    clear: both;
+}
+#space {
+    padding-top: 4.5%;
+}
+#GAMING {
+    float: left;
+    width: 70%;
+}
+#PacMan {
+    width:96%;
+}
+#imagefooter {
+    text-align: center;
+}
+aside {
+    float: left;
+    width: 25%;
+    padding-left: 35px;
+}
+h2 {
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+.Titles {
+    color: grey;
+    font-size: 15px;
+    padding: 25px 0px 25px 0px;
+}
+.asideboxes {
+    border-bottom: solid;
+    border-color: rgba(128, 128, 128, 0.750);
+    border-width: thin;
+    padding: 10px 0px 30px 0px;
+}
+
+/*
+footer
+*/
+footer {
+    clear: both;
+    border-top: solid 2px;
+    border-color: rgb(65, 65, 65);
+}
+.footerleft {
+    float: left;
+    padding-top: 1.2%;
+    width:60%;
+    font-size: 15px;
+}
+#footerlist {
+    list-style: none;
+    margin: 0%;
+}
+.footerlist a:visited {
+    display: inline;
+    margin-right: 4%;
+    color: rgba(70, 70, 70, 0.850);
+}
+.footerright {
+    float: right;
+    padding-top: 1.2%;
+}
+#span2 {
+    font-weight: bold;
+}
+#footerright {
+    margin-right: 15px;
+    font-size: 18px;
+}

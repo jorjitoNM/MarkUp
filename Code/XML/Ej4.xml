@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CATALOG [
+<!ELEMENT CATALOG (PRODUCT+)>
+<!ELEMENT PRODUCT (SPECIFICATIONS+, OPTIONS?, PRICE+, NOTES?)>
+    <!ATTLIST PRODUCT NAME CDATA #IMPLIED
+    CATEGORY (HandTool|Table|Shop-Professional) "HandTool"
+    PARTNUM CDATA #IMPLIED
+    PLANT (Pittsburgh|Milwaukee|Chicago) "Chicago"
+    INVENTORY (InStock|Backordered|Discontinued) "InStock"
+    >
+<!ELEMENT SPECIFICATIONS (#PCDATA)>
+    <!ATTLIST SPECIFICATIONS
+    WEIGHT CDATA #IMPLIED
+    POWER CDATA #IMPLIED
+    >
+<!ELEMENT OPTIONS (#PCDATA)>
+    <!ATTLIST OPTIONS
+    FINISH (MetalPolished|Matte) "Matte"
+    ADAPTER (Included|Optional|NotApplicable) "Included"
+    CASE (HardShell|Soft|NotApplicable) "HardShell"
+    >
+<!ELEMENT PRICE (#PCDATA)>
+    <!ATTLIST PRICE 
+        MSRP CDATA #IMPLIED
+        WHOLESALE CDATA #IMPLIED
+        STREET CDATA #IMPLIED
+        SHIPPING CDATA #IMPLIED
+    >
+<!ELEMENT NOTES (#PCDATA)>
+]>
+<CATALOG>
+    <PRODUCT NAME="iPhone" CATEGORY="Shop-Professional" INVENTORY="Backordered" PARTNUM="23236">
+        <SPECIFICATIONS WEIGHT="235gr">4Gb RAM, 128 Gb Storage</SPECIFICATIONS>
+        <OPTIONS FINISH="MetalPolished" ADAPTER="Optional">White, Red, Pink, Blue</OPTIONS>
+        <PRICE MSRP="$899" SHIPPING="10 days">$799</PRICE>
+    </PRODUCT>
+    <PRODUCT NAME="Pixel" CATEGORY="Shop-Professional" PLANT="Milwaukee" INVENTORY="InStock" PARTNUM="05786">
+        <SPECIFICATIONS WEIGHT="220gr" POWER="65W">6Gb RAM 128 Gb Storage</SPECIFICATIONS>
+        <OPTIONS CASE="Soft" ADAPTER="Included">White, Black, Ocean blue</OPTIONS>
+        <PRICE MSRP="$699" STREET="Milwaukee Street" SHIPPING="10 days">$685</PRICE>
+    </PRODUCT>
+    <PRODUCT NAME="Galaxy" CATEGORY="Shop-Professional" INVENTORY="InStock" PARTNUM="10245" PLANT="Chicago">
+        <SPECIFICATIONS WEIGHT="198gr">6gb RAM 256Gb Storage</SPECIFICATIONS>
+        <PRICE MSRP="$450" SHIPPING="10 days">$399</PRICE>
+        <NOTES>Get your airbuds free along with your phone</NOTES>
+    </PRODUCT>
+</CATALOG>

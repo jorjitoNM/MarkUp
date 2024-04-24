@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Assignment</h1>
+    </header>
+    <table border>
+        <tr>
+            <th colspan="4">LIBRARY</th>
+        </tr>
+        <tr>
+            <th colspan="3">CATALOG</th>
+            <th>APLICATTION FORM</th>
+        </tr>
+        <tr>
+            <td rowspan="2">BOOKS</td>
+            <td>Novels: <br>
+                <ul>
+                    <li>Science-fiction</li>
+                    <li>Fantsy</li>
+                </ul>
+            </td>
+            <td rowspan="2">
+                <a href="HTML/libros.html"><img src="Images/libros.jpg" alt="libros"></a>
+            </td>
+            <td rowspan="4">
+                <form action="http://jkorpela.fi/cgi-bin/echo.cgi">
+                <fieldset>
+                    <legend>Credentials:</legend>
+                        <label for="User">User</label>
+                        <br>
+                        <input type="text" id="User" name="User">
+                        <br>
+                        <label for="Password">Password</label>
+                        <br>
+                        <input type="password" id="Password" name="Password">
+                        <br>
+                </fieldset>
+                    <fieldset>
+                        <legend>Personal information:</legend>
+                            <label for="Name">Name:</label>
+                            <br>
+                            <input type="text" id="Name" name="Name" placeholder="John Smith" maxlength="30" required>
+                            <br>
+                            <br>
+                            <input type="radio" id="Male" name="Gender">
+                            <label for="Male">Male</label>
+                            <br>
+                            <input type="radio" id="Female" name="Gender">
+                            <label for="Female">Female</label>
+                            <br>
+                            <input type="radio" id="Other" name="Gender">
+                            <label for="Other">Other</label>
+                            <br>
+                            <br>
+                            <label for="Email">E-mail:</label>
+                            <br>
+                            <input type="email" name="Email" id="Email" placeholder="Doe@gmail.com">
+                            <br>
+                            <br>
+                            <label for="Nacionality">Nacionality:</label>
+                            <br>
+                            <select id="Nacionality">
+                               <option value="Spanish" selected>Spanish</option>
+                               <option value="Chinese">Chinese</option>
+                               <option value="Japanese">Japanese</option>
+                               <option value="French">French</option>
+                               <option value="German">German</option>
+                            </select>
+                            <br>
+                            <br>
+                            <input type="checkbox" name="Terms" id="Terms" checked>
+                            <label for="Terms">Agree to <a href="https://pdfseva.com/wp-content/uploads/2023/02/Terms-And-Conditions-Lauren-Asher.pdf">terms and conditions</a></label>
+                            <br>
+                            <br>
+                            <label for="Comments">Comments:</label>
+                            <br>
+                            <textarea name="Comments" rows="5" cols="20" id="Comments"></textarea>
+                            <br>
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Clear">
+                    </fieldset>
+                </form>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Tales: <br>
+                <ul>
+                    <li>Fables</li>
+                    <li>Fairy tales</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">FILMS</td>
+            <td>Thrillers:
+                <ul>
+                   <li>Psychological Thriller</li>
+                   <li>Crime Thriller</li>
+                </ul>
+            </td>
+            <td rowspan="2">
+                <img src="Images/Pelicula.jpg" alt="Pelicula">
+            </td>
+        </tr>
+        <tr>
+            <td>Others:
+                <ul>
+                   <li>Western
+                        <ol>
+                            <li>American western</li>
+                            <li>European western</li>
+                        </ol>
+                   </li>
+                   <li>Comedies</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

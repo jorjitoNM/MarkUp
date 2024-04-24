@@ -1,0 +1,246 @@
+/*--------- Classes --------*/
+.floatleft {
+    float:left;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+#all {
+    box-sizing: border-box;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    color:beige;
+}
+a {
+    text-decoration: none;
+    color: #292129;
+}
+
+/*----------------- Header --------------*/
+#head {
+    position: sticky;
+    top: 0;
+    display: inline-block;
+    height: 120px;
+    /*background-image: url("../Images/NMJBackground1080.png");
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;*/
+    width: 100%;
+}
+/* #headerimage {
+    position: relative;
+    width: 1600px;
+    height: 855px;
+}
+#headertext {
+    position: absolute;
+} */
+#headertext {
+    width: 100%;
+}
+#textodelheader {
+    float: left;
+    width: 50%;
+    padding-left: 100px;
+}
+#divdelnav {
+    float: left;
+    padding: 30px 80px 30px 30px;
+    width: 50%;
+}
+#titulo {
+    color: #fa34df;
+    font-size: 70px;
+    font-family: 'Russo One', sans-serif;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+#slogan {
+    color: #fa34df;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    margin-top: 48px;
+    margin-left: 15px;
+}
+#navbardiv {
+    float: inline-end;
+}
+
+
+/*-------------- Navbar -------------*/
+/*#navbar {
+    width: 100%;
+    height: 70px;
+    list-style-type: none;
+}
+.listitem {
+    display: block;
+    background-color: #ccf0d1;
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+    border-radius: 1000px;
+    text-decoration: none;
+}
+.dropdownbutton {
+    display: block;
+    position: relative;
+    background-color: #ccf0d1;
+    text-align: center;
+    width: 150px;
+    border-radius: 1000px;
+}
+.dropdown {
+    list-style-type: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+.itemlink {
+    text-decoration: none;
+}
+.dropdownitem {
+    display: block;
+}
+*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 10px;
+    display: block;
+    border-radius: 10px;
+    background-color: #c6bdff;
+    width: 150px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+nav ul li a:hover {
+    background-color: #00ced1;
+}
+
+/* Dropdown Styles */
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #c6bdff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    text-align: center;
+    border-radius: 10px;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li a:hover {
+    background-color: #00ced1;
+}
+
+/* Positioning */
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+
+
+/*----------- Main content ----------*/
+#maincontent {
+    background-color: black;
+}
+.carrousel {
+    display: flex;
+    overflow: hidden;
+    width: 200%;
+    height: 600px;
+}
+
+.carrousel img {
+    width: 200%;
+    height: 600px;
+    object-fit: cover;
+    animation: carrousel 25s infinite;
+}
+@keyframes carrousel {
+    0% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+
+
+/*--------- Footer --------*/
+.footer {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    background-color: #9133e9;
+    width: 100%;
+    height: auto;
+}
+#contact {
+    background-color: #ffbdfd;
+    opacity: 0.5;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 20px 100px;
+    color: #292129;
+}
+h3 {
+    font-size: 20px;
+}
+#footerlogo {
+    width: 150px;
+    height: 150px;
+}
+#footerimage {
+    float: right;
+    margin-right: 50px;
+    padding: 20px 0px;
+}
+#terms {
+    background-color: #ffbdfd;
+    opacity: 0.5;
+    border-radius: 40px;
+    padding: 20px 40px;
+    margin: 20px 100px;
+    color: #292129;
+    float: left;
+}
+#policy {
+    background-color: #ffbdfd;
+    opacity: 0.5;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 32px 100px;
+    color: #292129;
+    float: left;
+}

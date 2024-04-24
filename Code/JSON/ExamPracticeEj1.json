@@ -1,0 +1,21 @@
+{"shop":
+    {"Article": [
+        {
+         "name":"Socks",
+         "details":"Leotards",
+         "price":"1",
+         "order":"C",
+         "reference":"C10"
+        },
+        {
+            "name":"Socks",
+         "details":"Leotards",
+         "price":"1",
+         "order":"C",
+         "reference":"C10"
+        }
+    ]
+        
+    }
+    
+}

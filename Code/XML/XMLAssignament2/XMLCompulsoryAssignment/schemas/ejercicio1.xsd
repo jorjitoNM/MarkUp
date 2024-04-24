@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Customer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="IDCust">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:totalDigits value="5"></xs:totalDigits>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="NameCust">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="2"></xs:minLength>
+                            <xs:maxLength value="8"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Street">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="30"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="NumStreet">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="0"></xs:minInclusive>
+                            <xs:maxInclusive value="5000"></xs:maxInclusive>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="PostalCode">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:totalDigits value="5"></xs:totalDigits>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="City">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Madrid"></xs:enumeration>
+                            <xs:enumeration value="Barcelona"></xs:enumeration>
+                            <xs:enumeration value="Sevilla"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Phone">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{3}"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="DateOfBirth">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[1-2][0-9]{3}/[0-1][0-9]/[0-3][0-9]"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Discount">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:boolean">
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

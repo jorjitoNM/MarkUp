@@ -1,0 +1,92 @@
+body {
+    background-image: url("../Images/Gradient_Abstract_Background.jpg");
+
+  }
+header {
+    background-color: Gold;
+    opacity: 0.8;
+    font-family: serif garamond;
+}
+
+/* ID syles*/
+#tittle{
+    font-size: 2cm;
+    font-family: "Sofia", sans-serif;
+    text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px #F90, 0px -20px 40px #C33;
+    margin: 8%;
+}
+#What {
+    background-color: rgba(0, 81, 0, 0.464);
+    margin: 2% 7%;
+}
+#Why {
+    color: rgb(19, 141, 216);
+    background-color:rgba(255, 20, 145, 0.625);
+    margin: 2% 8%;
+}
+#Sintax {
+    margin: 2% 10%;
+    background-color: rgba(0, 213, 255, 0.464);
+    color:rgb(60, 0, 255);
+    
+}
+#Tables {
+    background-color: #ee82ee;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+#list2 {
+    color: dodgerblue;
+    padding: 3%;
+}
+#tabletittle {
+    font-size: 1cm;
+}
+#section3 {
+    background-image: url("../Images/backgroundmeme.png");
+    object-fit: cover;
+    margin: 0%;
+}
+#blank {
+    background-color: rgba(0, 255, 98, 0.711);
+}
+
+/*Element styles*/
+table,th,td,tr {
+    border-collapse: collapse;
+    border-style: double;
+    text-align: center;
+    border-color:black;
+    color:rgb(162, 0, 255);
+
+}
+table {
+    width: 50%;
+}
+td {
+    border-style: double;
+    background-color: rgba(81, 255, 0, 0.711)
+}
+th {
+    background-color: rgba(0, 255, 98, 0.711);
+}
+a {
+    color:cyan; 
+}
+ul {
+    list-style-type: circle;		
+}
+h3 {
+    font-family: monospace lucida;
+    background-color: rgb(208, 255, 1); 
+    color: rgb(255, 115, 0);
+}
+nav {
+    background-color:violet;
+}
+
+/*Classes*/
+.center {
+    text-align: center;
+}

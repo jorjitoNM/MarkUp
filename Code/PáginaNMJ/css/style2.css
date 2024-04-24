@@ -1,0 +1,103 @@
+/*---------- Comunes ----------------- */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.textcenter {
+    text-align: center;
+}
+#maincontent {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    background: radial-gradient(circle, black, #EAFAF1);
+    color:beige;
+    height: max-content;
+}
+
+
+
+
+
+
+/*---------- Trabajadores ----------*/
+h1 {
+    color: #7ff9c7;
+    font-size: 70px;
+    font-family: 'Orbitron', sans-serif;
+}
+h3 {
+    font-family: Rubik lines, swap;
+    font-size: 20px;
+}
+h4 {
+    padding-top: 10px;
+    color: #b7fadf;
+}
+#title {
+    width: 100%;
+    margin-bottom: 50px;
+    padding-top: 30px;
+}
+.trabajador {
+    width: 250px;
+    height: 250px;
+    border-radius: 60px;
+    margin-left: 30px;
+}
+.trabajadordiv {
+    width: 20%;
+    float:left
+}
+#frasetrabajadores {
+    color: ;
+
+}
+
+
+
+
+
+/*----------- Form -----------------*/
+input[type=text] {
+    border-bottom:  ;
+}
+input[type=email] {
+    border-bottom:  ;
+}
+label {
+    border-top: ;
+}
+#formpart {
+    position: relative;
+    clear: both;
+    width: 40%;
+    margin-left: 30%;
+}
+.formtext {
+    border-radius: 20px;
+    background-color: rgb(211, 240, 240);
+    border: solid 1px #7ff9c7;
+    margin: 5px 0px;
+    padding: 3px;
+    display: inline;
+}
+.formlabel {
+    margin-left: 10px;
+}
+textarea {
+    background-color: rgb(211, 240, 240);
+    border: solid 1px #7ff9c7;
+}
+#CV {
+    color: #7ff9c7;
+    margin-left: 34px;
+    margin-top: 10px;
+}
+#CVlabel {
+    position: absolute;
+    background-color: #7ff9c7;
+    color: black;
+    padding: 5px;
+    margin: 5px 0px;
+}

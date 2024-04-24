@@ -1,0 +1,8 @@
+.error::after {
+    background-color: rgba(255, 131, 131, 0.781);
+    color: black;
+    font-size: 1rem;
+    line-height: 1.8;
+    width: 500px;
+    content: attr(data-errormsg);
+}

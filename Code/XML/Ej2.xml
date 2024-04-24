@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student>
+    <name></name>
+    <address>Calle San Juan Nº13</address>
+    <dateOfbirth>05/08/2001</dateOfbirth>
+    <subjects>
+        <subjectName>Spanish</subjectName>
+        <subjectName>Math</subjectName>
+        <subjectName>Economy</subjectName>
+    </subjects>
+</student>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="ejercicio2.xsd">
+    <book id="Wasa" available="false">
+        <isbn>14750</isbn>
+        <title lang="Spanish">La princesa prometida</title>
+        <author id="Lol">
+            <name>Juan</name>
+            <born>2016-03-25</born>
+            <dead>2022-11-04</dead>
+        </author>
+        <author id="Lol2">
+            <name>Paco</name>
+            <born>2016-01-02</born>
+        </author>
+        <character>
+            <name>Juana</name>
+            <born>1955-06-30</born>
+            <qualification>10</qualification>
+        </character>
+    </book>
+    <book id="Wasaaa" available="true">
+        <isbn>15012</isbn>
+        <title lang="Chinese">Padre padre pobre</title>
+        <author id="Llados">
+            <name>Fitness</name>
+            <born>2017-07-20</born>
+        </author>
+        <character id="Pringao1">
+            <name>Pringao1</name>
+            <born>1998-06-30</born>
+            <qualification>7</qualification>
+        </character>
+        <character id="Pringao2">
+            <name>Pringao2</name>
+            <born>2001-05-16</born>
+            <qualification>1</qualification>
+        </character>
+        <character id="Pringao3">
+            <name>Pringao3</name>
+            <born>1974-10-03</born>
+            <qualification>3</qualification>
+        </character>
+    </book>
+</library>

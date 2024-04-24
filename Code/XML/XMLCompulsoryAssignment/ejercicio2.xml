@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/ejercicio2.xsd">
+        <book id="44Z0">
+            <author>Alfredo</author>
+            <title>Harry Potter</title>
+            <genre>Mistery</genre>
+            <price>24.95</price>
+            <pub_date>2013-05-12</pub_date>
+            <review>Standard book, kinda booring</review>
+        </book>
+        <book id="01W7">
+            <author>Juanita</author>
+            <title>Thuesday with Morrie</title>
+            <genre>Reflexion</genre>
+            <price>22.95</price>
+            <pub_date>2015-09-28</pub_date>
+            <review>Standard book, kinda booring</review>
+        </book>
+</books>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/ejercicio3.xsd">
+    <shirt effDate="2002-04-02">
+        <number>557</number>
+        <name>Short-Sleeved Linen Blouse</name>
+        <size system="US-DRESS">10</size>
+        <color value="blue"/>
+        <description>
+    This shirt is the best-selling shirt in
+    our catalog
+        </description>
+    </shirt>
+    <hat>
+        <number>557</number>
+        <name>Ten-Gallon Hat</name>
+        <color value="red"/>
+    </hat>
+</items>
+   

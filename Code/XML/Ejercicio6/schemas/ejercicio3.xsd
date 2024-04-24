@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="items">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="shirtType" minOccurs="0"></xs:element>
+                <xs:element ref="hatType" minOccurs="0"></xs:element>
+                <xs:element ref="umbrellaType" minOccurs="0"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Elements-->
+    <xs:element name="shirtType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numberType"></xs:element>
+                <xs:element name="nameType"></xs:element>
+                <xs:element name="sizeType" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="color"></xs:element>
+                <xs:element ref="description"></xs:element>
+            </xs:sequence>
+            <xs:attribute ref="effDate"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="hatType">
+        
+    </xs:element>
+    <xs:element name="umbrellaType">
+
+    </xs:element>
+
+
+    <xs:element name="numberType"></xs:element>
+    <xs:element name="nameType"></xs:element>
+    <xs:element name="sizeType"></xs:element>
+    <xs:element name="color"></xs:element>
+    <xs:element name="description"></xs:element>
+    <!-- Attributes-->
+    <xs:attribute name="effDate"></xs:attribute>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Companies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Company" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Name"></xs:element>
+                            <xs:element name="Employee" minOccurs="1" maxOccurs="25">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Name"></xs:element>
+                                        <xs:element name="Age"></xs:element>
+                                        <xs:element name="Address">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="HouseNo"></xs:element>
+                                                    <xs:element name="Street"></xs:element>
+                                                    <xs:element name="ZipCode"></xs:element>
+                                                 </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

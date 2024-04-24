@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div id="header1">
+        <div class="floatleft" id="logoimage">
+            <img src="Images/Logo.jpg" alt="universitylogo">
+        </div>
+        <div id="headertext" class="floatleft">
+            <p id="title1">Bristol</p>
+            <div id="title2">
+                <p>Ceremonial county</p>
+            </div>
+        </div>
+        <div class="floatright" id="search">
+            <label for="search">Search</label>
+            <div>
+                <input type="text" name="search" id="search">
+            </div>
+        </div>
+    </div>
+    <div id="navbar">
+        <ul>
+            <li class="floatleft textcenter navborderright"><a href="">Homepage</a></li>
+            <li class="floatcenter textcenter navborderright"><a href="">Link to second page</a></li>
+            <li class="floatright textcenter"><a href="">Ecologist</a></li>
+        </ul>
+    </div>
+    <div id="maincontent">
+        <div id="maintable" class="floatleft">
+            <table>
+                <tr>
+                    <th colspan="3">Bristol areas</th>
+                </tr>
+                <tr>
+                    <td>County</td>
+                    <td>Area</td>
+                    <td>Electorate</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Bristol</td>
+                    <td>Bristol West</td>
+                    <td>84,571</td>
+                </tr>
+                <tr>
+                    <td>Bristol South</td>
+                    <td>80,999</td>
+                </tr>
+            </table>
+        </div>
+        <div class="floatleft" id="form">
+            <form action="">
+                <h3 class="textcenter" id="formtitle">Registration Form</h3>
+                <div class="formborder" id="nameandsurename">
+                    <div class="floatleft">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Name" required>
+                    </div>
+                    <div class="floatright">
+                        <label for="surename">Surename</label>
+                        <input type="text" id="surename" name="Surename" maxlength="20">
+                    </div>
+                </div>
+                <div class="formborder">
+                    <div>
+                        <label for="male" class="floatleft">Gender</label>
+                        <div class="floatleft">
+                            <input type="radio" id="male" name="Gender" checked>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="Gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="dateofbirth">Date of birth</label>
+                        <input type="date" id="dateofbirth" name="Birth">
+                    </div>
+                </div>
+                <div class="formborder">
+                    <label for="country">Country</label>
+                    <select name="Country" id="country">
+                        <option value="Spain" selected>Spain</option>
+                        <option value="USA">USA</option>
+                        <option value="China">China</option>
+                        <option value="India">India</option>
+                        <option value="Brasil">Brasil</option>
+                    </select>
+                </div>
+                <div class="formborder">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Introduce tu email" name="Email">
+                </div>
+                <div class="formborder">
+                    <label for="coments">Coments</label>
+                    <textarea name="Coments" id="coments" cols="30" rows="10">Escriba sus comentarios</textarea>
+                </div>
+                <div id="formborder">
+                    <input type="checkbox" id="newsletter" checked>
+                    <label for="newsletter">I agree to my email being stored and used to recieve the newsletter</label>
+                    <div>
+                        <input type="checkbox" id="comercial">
+                        <label for="comercial">I agree to recieve comercial ofers</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="floatright" id="divimage">
+            <h3>Bristol bridge</h3>
+            <img src="Images/5472.jpg" alt="bristol bridge" id="image">
+        </div>
+    </div>
+    <div class="textcenter">
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

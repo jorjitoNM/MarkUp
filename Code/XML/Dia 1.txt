@@ -1,0 +1,23 @@
+<mydailymenu>
+	<day>
+		<name> Monday </monday>
+		<meal>
+			<name> Breakfast </name>
+			<plate> Orange Juice </plate>
+			<plate> Toast </plate>
+			<plate> Black Coffee </plate>
+		</meal>
+		<meal>
+			<name> Launch </name>
+			<plate> Tuna sandwich </plate>
+			<plate> Apple </plate>
+		</meal>
+		<meal>
+			<name> Dinner </name>
+			<plate> Hamburger steak </plate>
+			<plate> Mashed potatoes </plate>
+			<plate> Green beans </plate>
+			<plate> Jello </plate>
+		</meal>
+	</day>
+</mydailymenu>

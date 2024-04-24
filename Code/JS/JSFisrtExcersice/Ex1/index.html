@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", assignEvents);
+        //Functions
+        function assignEvents() {
+            document.getElementById("nameLabel").addEventListener("mouseover", nameLabelMessage);
+            document.getElementById("name").addEventListener("change", nameChange);
+            document.getElementById("name").addEventListener("click",nameClick);
+            document.getElementById("sureNameLabel").addEventListener("click", sureNameLabelCLick);
+            document.getElementById("sureName").addEventListener("mouseover", sureNameMessage);
+            document.getElementById("buttonClick").addEventListener();
+        }
+        function nameLabelMessage () {
+            alert("What´s up nigga")
+        }
+        function nameChange() {
+            let text = document.getElementById("name").value;
+            document.getElementById("sureName").value = text;
+        }
+        function sureNameLabelCLick() {
+            alert("World cuuuup");
+        }
+        function nameClick() {
+            alert("Bom dia");
+        }
+        function sureNameMessage() {
+            alert("Have a nice day");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>JS</h1>
+    <label for="name" id="nameLabel">First name:</label>
+    <br>
+    <input type="text" id="name" name="name">
+    <br>
+    <label for="sureName" id="sureNameLabel">Last name:</label>
+    <br>
+    <input type="text" id="sureName" name="sureName">
+</body>
+</html>

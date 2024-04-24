@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let a = document.getElementById("fisrtNumber").value;
+            let b = document.getElementById("secondNumber").value;
+            let c = document.getElementById("thirdNumber").value;
+            document.getElementById("calculate").addEventListener("click", calculate);
+            function calculate () {
+                //document.getElementById("result1").value = (-b+(Math.sqrt((Math.pow(2,b)),2)))/(2*a);
+                document.getElementById("result1").value = Math.sqrt(Math.pow(2,b)-(4*a*c));
+                document.getElementById("result2").value = (-b-(Math.sqrt(Math.pow(2,b)-(4*a*c))))/(2*a);
+            }
+        });
+    </script>
+</head>
+<body>
+    <label for="fisrtNumber">A: </label>
+    <input type="text" id="fisrtNumber"> <br>
+    <label for="secondNumber">B: </label>
+    <input type="text" id="secondNumber"> <br>
+    <label for="thirdNumber">C: </label>
+    <input type="text" id="thirdNumber"> <br>
+    <label for="result1">Result: </label>
+    <input type="text" id="result1" name="result">
+    <input type="text" id="result2" name="result">
+    <button id="calculate">Calculate</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCEDURE>
+    <TITLE>How to Bathe a Cat</TITLE>
+    <!-- TITLE tag wasn´t properly closed-->
+    <OVERVIEW>This procedure
+    tells you how to bathe a cat. <WARNING>Cats don't like to
+    take baths. You could get hurt doing this. Be sure to obtain all the
+    required protective gear before you start.
+    </WARNING></OVERVIEW>
+    <!-- OVERVIEW tag was closed before closing the warning tag.The warning tag must have been opened and closed beetewn the OVERVIEW tags-->
+    <EQUIPMENT>
+        <!-- This fisrt EQUIPMENT tag had gramatically error, so it didn´t match the other one-->
+        <ITEM>Hockey Mask </ITEM>
+        <!-- This first ITEM had no closing tag-->
+        <ITEM>Padded Full-body Kevlar Armor</ITEM>
+
+        <ITEM>Tub full of warm water</ITEM>
+        <ITEM>Towels</ITEM>
+        <ITEM>First Aid kit</ITEM>
+        <ITEM>Cat Shampoo</ITEM>
+    </EQUIPMENT>
+    <INSTRUCTIONS>
+        <STEP> Locate the cat, who by now is hiding under the bed.</STEP>
+        <STEP>Place the cat in the tub of water.</STEP>
+        <!-- Unproperly opnening ITEM tag, it made no sense. Also the STEP opening tag was missing-->
+        <STEP>Using the First Aid kit, repair the damage to your head and arms.</STEP>
+        <STEP>Place the cat back in the tub and hold it down.</STEP>
+        <STEP>Wash it really fast, then make an effort to dry it with the towels.</STEP>
+        <STEP>Decide not to do this again.</STEP>
+    </INSTRUCTIONS>
+</PROCEDURE>
+<!-- There was no root closing tag-->

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms page</h1>
+    <form action="http://jkorpela.fi/cgi-bin/echo.cgi">
+        <label for="DNI">DNI:</label>
+        <br>
+        <input type="text" id="DNI" name="DNI" maxlength="9" placeholder="00000000A" pattern="[0-9]{8}[A-Z a-z]{1}">
+        <br>
+        <label for="Sure name">Sure name:</label>
+        <br>
+        <input type="text" id="Sure name" name="Sure name" maxlenght="30">
+        <br>
+        <label for="First name">First name:</label>
+        <br>
+        <input type="text" id="First name" name="First name" maxlength="15">
+        <br>
+        <label for="date of birth">Date of birth:</label>
+        <br>
+        <input type="date" name="date of birth">
+        <br>
+        <label for="Country">Select your country</label>
+        <br>
+        <select id="Country">
+            <option value="Spain" selected>Spain</option>
+            <option value="Spain" >France</option>
+            <option value="Spain" >U.K.</option>
+            <option value="Spain" >China</option>
+        </select>
+        <br>
+        <label for="Email">Email:</label>
+        <br>
+        <input type="email" id="Email" name="Email">
+        <br>
+        <label for="Password">Password:</label>
+        <br>
+        <input type="password" name="Password" maxlength="10">
+        <br>
+        <label for="Gender">Select your gender:</label>
+        <br>
+        <label for="Gender">Masc</label>
+        <input type="radio" id="Gender" name="Gender" value="Masc">
+        <br>
+        <label for="Gender">Fem</label>
+        <input type="radio" id="Gender" name="Gender" value="Fem">
+        <br>
+        <label for="Gender">Else</label>
+        <input type="radio" id="Gender" name="Gender" value="Else">
+        <br>
+        <textarea name="Comments" row="20" cols="20" placeholder="Write any comment"></textarea>
+        <br>
+        <label for="Happy">Feeling:</label>
+        <br>
+        <label for="Happy">Happy</label>
+        <input type="checkbox" id="Happy" name="Happy">
+        <br>
+        <label>How are u feeling??</label>
+        <br>
+        <label for="percent">100%</label>
+        <input type="radio" name="percent" value="100%">
+        <br>
+        <label>75%</label>
+        <input type="radio" name="percent" value="75%">
+        <br>
+        <label>50%</label>
+        <input type="radio" name="percent" value="50%">
+        <br>
+        <label>25%</label>
+        <input type="radio" name="percent" value="25%">
+        <br>
+        <label> Rate your experience</label>
+        <ol>
+            <li>
+                <label>&#128525;</label>
+                <input type="radio" name="Experince" value="Lovely">
+            </li>
+            <li>
+                <label>&#128528;</label>
+                <input type="radio" name="Experince" value="Bahh">
+            </li>
+            <li>
+                <label>&#128530;</label>
+                <input type="radio" name="Experince" value="Grrr">
+            </li>
+        </ol>
+        <br>
+        <br>
+        <input type="submit">
+        <br>
+        <br>
+        <input type="reset">
+</body>
+</html>

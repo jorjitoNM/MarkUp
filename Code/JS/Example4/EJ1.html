@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("random").addEventListener("click", randomNumber);
+            function randomNumber () {
+                let numberA = parseInt(document.getElementById("number1").value);
+                let numberB = parseInt(document.getElementById("number2").value);
+                document.getElementById("result").innerHTML = parseInt(Math.random()*Math.abs(numberA-numberB));
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <button id="random">Get Random</button>
+    <p id="result"></p>
+</body>
+
+</html>
