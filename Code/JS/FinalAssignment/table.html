@@ -11,6 +11,7 @@
      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script defer src="JS/table.js"></script>
     <script defer src="JS/patients.js"></script>
+    <script defer src="JS/medicalRecords.js"></script>
     </head>
 <body>
     <div class="container">
@@ -30,6 +31,9 @@
                     <th>Action</th>
                 </tr>
         </table>
+        <div id="medRecordTableDiv">
+            
+        </div>
     </div>
     <div class="modal fade" id="addPatientModal">
         <div class="modal-dialog">
@@ -64,7 +68,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="patientID" class="form-label">Patient ID:</label>
+                        <label for="updatePatientID" class="form-label">Patient ID:</label>
                         <input type="text" class="form-control border border-warning" id="updatePatientID" readonly>
                     </div>
                     <div class="mb-3">

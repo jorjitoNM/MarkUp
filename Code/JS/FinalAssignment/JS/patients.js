@@ -76,6 +76,7 @@ function createPatientRow(patient) {
         + "<td class='py-2 px-3'><button class='btn btn-primary update'>Update</button></td>";
     row.querySelector(".update").addEventListener("click", showUpdatePatient);
     row.querySelector(".delete").addEventListener("click", deletePatient);
+    row.querySelector(".getInfo").addEventListener("click", getInfo);
     return row;
 }
 
