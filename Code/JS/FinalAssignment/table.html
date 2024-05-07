@@ -35,6 +35,8 @@
             
         </div>
     </div>
+
+    <!-- Add Patient Modal -->
     <div class="modal fade" id="addPatientModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -59,6 +61,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Update Patient Modal -->
     <div class="modal fade" id="updatePatientModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -83,6 +87,40 @@
                 <div class="modal-footer">
                     <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button class="btn btn-primary" id="updatePatientButton">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medical Record Modal -->
+    <div class="modal fade" id="addMedicalRecordModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addMedicalRecordLabel">Add New MedRecord:</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="addMedicalRecordDiagnosis" class="form-label">Diagnosis:</label>
+                        <input type="text" class="form-control border border-warning" id="addMedicalRecordDiagnosis" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addMedicalRecordDate" class="form-label">Date:</label>
+                        <input type="date" class="form-control border border-warning" id="addMedicalRecordDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addMedicalRecordDoctor" class="form-label">Doctor:</label>
+                        <select class="form-select" id="addMedicalRecordDoctor"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addMedicalRecordMedicines" class="form-label">Medications:</label>
+                        <select class="form-select" id="addMedicalRecordMedicines" multiple></select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" id="addMedicalRecordButton">Add</button>
                 </div>
             </div>
         </div>

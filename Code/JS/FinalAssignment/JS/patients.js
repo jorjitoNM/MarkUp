@@ -90,12 +90,15 @@ function showUpdatePatient(event) {
     document.getElementById("updatePatientID").value = ID;
     document.getElementById("updatePatientName").value = name;
     document.getElementById("updatePatientPhone").value = phone.trim();
-    document.getElementById("updatePatientButton").addEventListener("click", function () {
+    document.getElementById("updatePatientButton").addEventListener("click", handleUpdatePatient);
+    function handleUpdatePatient () {
         updatePatient(row);
-    });
+        document.getElementById("updatePatientButton").removeEventListener("click", handleUpdatePatient);
+    };
     let updateModal = new bootstrap.Modal(document.getElementById("updatePatientModal"));
     updateModal.show();
 }
+
 function updatePatient(row) {
     let ID = document.getElementById("updatePatientID").value;
     let name = document.getElementById("updatePatientName").value;
