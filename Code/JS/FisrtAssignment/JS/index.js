@@ -18,6 +18,7 @@ function nameLength() {
         return false;
     }
     else {
+        nameField.parentElement.classList.remove("error");
         return true;
     }
 }
@@ -32,6 +33,7 @@ function surNameLength() {
         return false;
     }
     else {
+        surNameField.parentElement.classList.remove("error");
         return true;
     }
 }
@@ -44,6 +46,7 @@ function validEmail() {
     let emailContent = document.getElementById("email").value;
     let reg = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (reg.test(emailContent)) {
+        email.parentElement.classList.remove("error");
         return true;
     }
     else {
@@ -73,14 +76,15 @@ function passwordsNotEqual() {
         password.parentElement.setAttribute("data-errormsg", "You need to write a paswsword");
         exit = false;
     }
-    else {
-        if (passwordValue !== confirmValue) {
+    else if (passwordValue !== confirmValue) {
             //let error = document.querySelector(".error");
             //error.setAttribute("data-errormsg", "Both passwords have to be the same");
             confirm.parentElement.classList.add("error");
             confirm.parentElement.setAttribute("data-errormsg", "Both passwords have to be the same");
             exit = false;
-        }
+    }
+    else {
+        password.parentElement.classList.remove("error");
     }
     return exit;
 }
@@ -106,7 +110,7 @@ function minorCheck() {
             dateInput.parentElement.setAttribute("data-errormsg", "You have to be over 18");
             exit = false;
         }
-        else if (today.getMonth() === userDate.getMonthç()) {
+        else if (today.getMonth() === userDate.getMonth()) {
             alert("Minor detected");
             dateInput.parentElement.classList.add("error");
             dateInput.parentElement.setAttribute("data-errormsg", "You have to be over 18");
@@ -118,6 +122,9 @@ function minorCheck() {
                 exit = false;
             }
         }
+    }
+    if (exit) {
+        dateInput.parentElement.classList.remove("error");
     }
     return exit;
 }
@@ -195,4 +202,19 @@ function validate() {
         failures.push({ input: "dateofbirth", msg: "You have to be over 18 to submit" })
     }
     return failures;
+}
+function validation () {
+    function check () {
+        let check = document.getElementById("termsofservice");
+        if (!check.checked) {
+            //failures.push({ input: "termsofservice", msg: "You have to agree the terms and conditions to submit" });
+            valid = false;
+            check.parentElement.classList.add("error");
+            check.parentElement.setAttribute("data-errormsg", "You have to agree the terms and conditions to submit")
+        }
+    }
+    
+    if (nameLength && surNameLength && validEmail && passwordsNotEqual && minorCheck && ) {
+        
+    }
 }

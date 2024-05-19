@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let colors = new Object();
+        colors.favourite = 'blue';
+        colors.nigga = 'nigga';
+        console.log(colors.favourite);
+        console.log(colors.nigga);
+        let myColors = colors;
+        myColors.favourite = 'red';
+        console.log(colors.favourite);
+        colors.favourite = 'nigga';
+        console.log(myColors.favourite);
+        colors.nigga = 'myNigga';
+        console.log(colors.nigga);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

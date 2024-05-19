@@ -125,5 +125,43 @@
             </div>
         </div>
     </div>
+
+    <!-- Update Medical Record Modal -->
+    <div class="modal fade" id="updateMedicalRecordModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateMedicalRecordLabel">Update MedRecord:</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="updateMedicalRecordID" class="form-label">Medical Record ID::</label>
+                        <input type="text" class="form-control border border-warning" id="updateMedicalRecordID" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateMedicalRecordDiagnosis" class="form-label">Diagnosis:</label>
+                        <input type="text" class="form-control border border-warning" id="updateMedicalRecordDiagnosis" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateMedicalRecordDate" class="form-label">Date:</label>
+                        <input type="date" class="form-control border border-warning" id="updateMedicalRecordDate" required>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="updateMedicalRecordDoctor" class="form-label col-3">Doctor:</label>
+                        <select class="form-select col-5" id="updateMedicalRecordDoctor"></select>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="updateMedicalRecordMedicines" class="form-label col-3">Medications:</label>
+                        <select class="form-select col-7 p-1" id="updateMedicalRecordMedicines" multiple></select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" id="updateMedicalRecordModalButton">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

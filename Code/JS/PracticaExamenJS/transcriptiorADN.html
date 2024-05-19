@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert("pene")
+        let numeros = [10, 5, 20, 8, 15];
+        alert(Math.max(...numeros)); //hay que poner lo 3 puntos para que te coja el array
+            let cadena = prompt("Introduzca cadena de ADN");
+            let ARN = "";
+            console.log(typeof(ARN));
+            for ($i = 0;$i < cadena.length;$i++) {
+                if (cadena.charAt($i) == 'A') {
+                    ARN += 'U';
+                }
+                else if (cadena.charAt($i) == 'T') {
+                    ARN += 'A';
+                }
+                else if (cadena.charAt($i) == 'C') {
+                    ARN += 'G';
+                }
+                else if (cadena.charAt($i) == 'G') {
+                    ARN += 'C';
+                }
+            }
+            console.log(ARN.toString());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

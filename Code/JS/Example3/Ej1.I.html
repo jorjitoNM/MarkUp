@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(typeof(nombre));
+        let stars = 5.555, text1 = 'stars in the sky';
+        let infiniteNumber = Infinity;
+        console.log('stars var value is: ' + stars);
+        stars = 5.555E5;
+        console.log('stars var value is (multiplied by 100000): ' + stars);
+        stars = 5.555E-5;
+        console.log(' stars var value is now a very small number: ' + stars);
+        console.log('stars var value is (Nonsense): ' + stars * text1);
+        stars = 5.555e100000000000000000;
+        console.log('stars var value is now too big: ' + stars);
+        stars = 5.555E-100000000000000000; alert('stars var value is now too small: ' + stars);
+        console.log('A positive number divided by 0 returns: ' + (5 / 0));
+        console.log(' A negative number divided by 0 returns: ' + (-5 / 0));
+        console.log('Zero divided by zero returns: ' + (0 / 0));
+        console.log('infiniteNumber var value is: ' + infiniteNumber);
+        let tenCents = .1; let twentyCents = .2; let thirtyCents = .3;
+        console.log('0.2-0.1 equals: ' + (twentyCents - tenCents));
+        console.log('0.3-0.2 equals: ' + (thirtyCents - twentyCents)); //Find out why
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

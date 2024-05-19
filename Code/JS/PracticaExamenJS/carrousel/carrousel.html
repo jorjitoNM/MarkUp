@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let myImages = [
+            "images/Beneficios-del-coco-1-1200x800.jpg",
+            "images/coco.jpg",
+            "images/Coco.png",
+            "images/f.elconfidencial.com_original_03c_61a_ca3_03c61aca3e0d45f3d52402f4ed27ab83.jpg",
+            "images/pr_20_20170905171904.png"
+        ];
+        let counter = 0;
+        document.addEventListener("DOMContentLoaded",loadFunctions);
+        function loadFunctions () {
+            console.log(typeof(myImages));
+            console.log(typeof(myImages[0]));
+            document.getElementById("next").addEventListener("click", next);
+            document.getElementById("last").addEventListener("click", last);
+            document.getElementById("random").addEventListener("click", random);
+        }
+        function random () {
+            let random = parseInt(Math.random()*5);
+            let image = document.getElementById("cocosImage");
+            image.setAttribute("src",myImages[random]);
+            for ($i = 0;$i < 10;$i++) {
+                random =  parseInt(Math.random()*5);
+                console.log(random);
+            }
+        }
+        function next () {
+            if (counter < 4)
+                counter++;
+            else
+                counter = 0;
+            let image = document.getElementById("cocosImage");
+            image.setAttribute("src",myImages[counter]);
+            console.log(counter);
+        }
+        function last () {
+            if (counter > 0)
+                counter--;
+            else
+                counter = 4;
+            let image = document.getElementById("cocosImage");
+            image.setAttribute("src",myImages[counter]);
+            console.log(counter);
+        }
+    </script>
+</head>
+<body>
+    <h1>Me pican los cocos</h1>
+    <div id="carrousel">
+        <img src="images/Beneficios-del-coco-1-1200x800.jpg" alt="cocos" id="cocosImage">
+    </div> <br>
+    <button id="next">Next</button>
+    <button id="last">Last</button>
+    <button id="random">Random</button>
+</body>
+</html>

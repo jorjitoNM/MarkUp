@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let counter = 0;
+        document.addEventListener("DOMContentLoaded",loadFunctions);
+        function loadFunctions () {
+            document.getElementById("increase").addEventListener("click", increase);
+            document.getElementById("decrease").addEventListener("click", decrease);
+            document.getElementById("reset").addEventListener("click", reset);
+        }
+        function increase() {
+            counter++;
+            updateCounter();
+        }
+
+        function decrease() {
+            counter--;
+            updateCounter();
+        }
+
+        function reset() {
+            counter = 0;
+            updateCounter();
+        }
+        function updateCounter() {
+            console.log(typeof(counter));
+            let number = document.getElementById("counter");
+            let counter2 = document.getElementById("counter2");
+            number.textContent = parseInt(counter);
+            counter2.value = parseInt(counter);
+        }
+    </script>
+</head>
+<body>
+    <h1>My counter</h1>
+    <div id="counter"></div> <br>
+    <input type="number" id="counter2">
+    <button id="increase">Increase</button>
+    <button id="decrease">Decrease</button>
+    <button id="reset">Reset</button>
+</body>
+</html>
