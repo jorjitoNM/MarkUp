@@ -53,8 +53,8 @@ function showMedicalRecordModal() {
     document.getElementById("addMedicalRecordMedicines").innerHTML = "";
     document.getElementById("addMedicalRecordDiagnosis").value = "";
     document.getElementById("addMedicalRecordModalButton").addEventListener("click", addMedicalRecord);
-    fillDoctors();
-    fillMedications();
+    fillDoctors("addMedicalRecordDoctor");
+    fillMedications("addMedicalRecordMedicines");
     let addModal = new bootstrap.Modal(document.getElementById("addMedicalRecordModal"));
     addModal.show();
 }
@@ -63,7 +63,7 @@ function addMedicalRecord() {
     let date = new Date(document.getElementById("addMedicalRecordDate").value);
     let formattedDate = date.toISOString().split('T')[0];
     let doctorID = document.getElementById("addMedicalRecordDoctor").value;
-    let medication = getSelectedMedications();
+    let medication = getSelectedMedications("addMedicalRecordMedicines");
     let medRecord = {
         id: 0,
         description: diagnosis,
@@ -95,7 +95,7 @@ function addMedicalRecord() {
             console.error('Error in the fetch', error);
         });
 }
-function fillDoctors() {
+function fillDoctors(comboID) {
     fetch("https://informatica.iesquevedo.es/marcas/doctors")
         .then(response => {
             if (!response.ok) {
@@ -105,7 +105,7 @@ function fillDoctors() {
         })
         .then(data => {
             console.log(data);
-            let comboDoctors = document.getElementById("addMedicalRecordDoctor");
+            let comboDoctors = document.getElementById(comboID);
             comboDoctors.innerHTML = "";
             data.forEach(doctor => {
                 let option = document.createElement("option");
@@ -118,8 +118,8 @@ function fillDoctors() {
             console.error('Error in the fetch', error);
         })
 }
-function fillMedications() {
-    let comboMeds = document.getElementById("addMedicalRecordMedicines");
+function fillMedications(comboID) {
+    let comboMeds = document.getElementById(comboID);
     let option = document.createElement("option");
     option.value = 1;
     option.textContent = "Uribel";
@@ -145,8 +145,8 @@ function fillMedications() {
     option.textContent = "Cephalexin";
     comboMeds.appendChild(option);
 }
-function getSelectedMedications() {
-    let medicationList = document.getElementById("addMedicalRecordMedicines");
+function getSelectedMedications(comboID) {
+    let medicationList = document.getElementById(comboID);
     let medications = [];
     for (let i = 0; i < medicationList.options.length; i++) {
         if (medicationList.options[i].selected) {
@@ -192,7 +192,7 @@ function updateMedicalRecord (row) {
     let formattedDate = medRecordDate.toISOString().split('T')[0];
     let patientID = row.parentNode.getAttribute("patientID");
     let doctorID = document.getElementById("updateMedicalRecordDoctor").value;
-    let medication = getSelectedMedicationsUpdate();
+    let medication = getSelectedMedications("updateMedicalRecordMedicines");
     let medicalRecord = {
         id: medRecordID,
         description: diagnosis,
@@ -216,7 +216,8 @@ function updateMedicalRecord (row) {
             return response.json();
         })
         .then(data => {
-            console.log('Patient updated succesfully ' + data);
+            console.log('Medical record updated succesfully ' + data);
+            modifyMedicalRecord(medicalRecord);
             row.cells[0].innerText = medicalRecord.id;
             row.cells[1].innerText = medicalRecord.description;
             row.cells[2].innerText = medicalRecord.date;
@@ -228,16 +229,23 @@ function updateMedicalRecord (row) {
             console.error('Error in the fetch', error);
         })
 }
+function modifyMedicalRecord (medicalRecord) {
 
+}
 function showUpdateMedicalRecord (event) {
+    //Cleaning
+    document.getElementById("updateMedicalRecordMedicines").innerHTML = "";
+    document.getElementById("updateMedicalRecordDoctor").innerHTML = "";
+
+
     let row = event.target.parentNode.parentNode;
     let cells = row.getElementsByTagName("td");
     let medRecordID = cells[0].innerText;
     let diagnosis = cells[1].innerText;
     let medRecordDate = cells[2].innerHTML;
     let patientID = row.parentNode.getAttribute("patientID");
-    fillDoctorsUpdate();
-    fillMedicationsUpdate();
+    fillDoctors("updateMedicalRecordDoctor");
+    fillMedications("updateMedicalRecordMedicines");
     document.getElementById("updateMedicalRecordID").value = medRecordID;
     document.getElementById("updateMedicalRecordDiagnosis").value = diagnosis;
     document.getElementById("updateMedicalRecordDate").value = medRecordDate;
@@ -248,59 +256,6 @@ function showUpdateMedicalRecord (event) {
     };
     let updateMedicalRecordModal = new bootstrap.Modal(document.getElementById("updateMedicalRecordModal"));
     updateMedicalRecordModal.show();
-}
-
-
-
-function fillDoctorsUpdate() {
-    fetch("https://informatica.iesquevedo.es/marcas/doctors")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response failed');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-            let comboDoctors = document.getElementById("updateMedicalRecordDoctor");
-            comboDoctors.innerHTML = "";
-            data.forEach(doctor => {
-                let option = document.createElement("option");
-                option.value = doctor.id;
-                option.textContent = doctor.name;
-                comboDoctors.appendChild(option);
-            });
-        })
-        .catch(error => {
-            console.error('Error in the fetch', error);
-        })
-}
-function fillMedicationsUpdate() {
-    let comboMeds = document.getElementById("updateMedicalRecordMedicines");
-    let option = document.createElement("option");
-    option.value = 1;
-    option.textContent = "Uribel";
-    comboMeds.appendChild(option);
-    option = document.createElement("option");
-    option.value = 2;
-    option.textContent = "Ergocalciferol";
-    comboMeds.appendChild(option);
-    option = document.createElement("option");
-    option.value = 3;
-    option.textContent = "Enalapril";
-    comboMeds.appendChild(option);
-    option = document.createElement("option");
-    option.value = 4;
-    option.textContent = "Lansoprazole";
-    comboMeds.appendChild(option);
-    option = document.createElement("option");
-    option.value = 5;
-    option.textContent = "Prednisone";
-    comboMeds.appendChild(option);
-    option = document.createElement("option");
-    option.value = 6;
-    option.textContent = "Cephalexin";
-    comboMeds.appendChild(option);
 }
 function getSelectedMedicationsUpdate() {
     let medicationList = document.getElementById("updateMedicalRecordMedicines");
