@@ -150,6 +150,10 @@ function deletePatient (event) {
     .then(data => {
         console.log('Patient deleted succesfully ' + data);
         document.getElementById("patientTable").removeChild(row);
+        let medRecordTable = document.getElementById("medRecordTable");
+        if (medRecordTable && document.getElementById("medRecordTableDiv").hasChildNodes()){
+            document.getElementById("medRecordTable").remove();
+        }
         $('#updatePatientModal').modal('hide');
     })
     .catch(error => {
